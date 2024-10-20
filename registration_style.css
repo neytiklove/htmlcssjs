@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'RDRGothica-Regular'; /* Задайте имя шрифта */
+    src: url('RDRGothica-Regular.ttf') format('truetype'); /* Путь к вашему шрифту */
+}
+
+body {
+    font-family: RDRGothica-Regular, sans-serif;
+	background-image: url('img/background.jpg'); /* Подключение изображения фона */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="username"] 
+{
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
+    color: #777;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Задаем общий стиль для полей ввода */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="username"]
+button {
+    font-family: 'RDRGothica-Regular', sans-serif; /* Меняем шрифт на Arial или другой */
+    font-size: 16px; /* Размер шрифта */
+}
+
+/* Дополнительно можно задать стиль только для кнопки */
+button {
+    font-family: 'RDRGothica-Regular', sans-serif; /* Шрифт для кнопки */
+    font-size: 16px;
+    font-weight: bold; /* Жирный шрифт для кнопки */
+    letter-spacing: 0.5px; /* Межбуквенный интервал */
+}

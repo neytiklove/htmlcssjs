@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'RDRGothica-Regular'; /* Задайте имя шрифта */
+    src: url('RDRGothica-Regular.ttf') format('truetype'); /* Путь к вашему шрифту */
+}
+
+h1 {
+	font-family: 'RDRGothica-Regular', sans-serif;
+}
+p {
+	font-family: 'RDRGothica-Regular', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);; /* Легкая тень текста */
+	line-height: 1.6; /* Межстрочный интервал */
+    color: #fff; /* Белый текст для контраста с фоном */
+    text-align: justify; /* Выравнивание по ширине */
+    background-color: rgba(0, 0, 0, 0.6); /* Черный полупрозрачный фон */
+    padding: 20px; /* Внутренние отступы для текста */
+    border-radius: 10px; /* Округленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Тень для создания глубины */
+    margin: 20px auto; /* Отступы сверху и снизу, центрирование по горизонтали */
+    max-width: 800px; /* Ограничение по ширине блока текста */
+	opacity: 0; /* Изначально невидимы */
+    transform: translateY(20px); /* Смещаем элементы вниз */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Плавная анимация */
+}
+/* Класс, который будет добавляться при попадании в область видимости */
+p.show {
+    opacity: 1; /* Элемент становится видимым */
+    transform: translateY(0); /* Возвращаем элемент в исходное положение */
+}
+/* Когда элемент выходит из зоны видимости */
+p.hidden {
+    opacity: 0; /* Элемент исчезает */
+    transform: translateY(20px); /* Смещаем обратно */
+}
+p:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Более темный фон при наведении */
+    transition: background-color 0.8s ease; /* Плавный переход фона */
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('img/background.jpg'); /* Подключение изображения фона */
+    background-size: cover; /* Масштабирование изображения */
+    background-position: center; /* Центрирование изображения */
+    background-repeat: no-repeat; /* Убираем повторение изображения */
+    min-height: 100vh; /* Минимальная высота в 100% от высоты видимой области */
+    color: #fff; /* Цвет текста */
+}
+
+header {
+    font-family: 'RDRGothica-Regular', sans-serif;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    padding: 15px 30px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Расстояние между пунктами меню */
+}
+
+.nav-links li {
+    position: relative; /* Для создания эффекта подчеркивания */
+}
+
+.nav-links a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #fff; /* Цвет текста */
+    padding: 10px 15px;
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.nav-links a:hover {
+    color: #ffd700; /* Цвет при наведении */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Высота подчеркивания */
+    background-color: #ffd700; /* Цвет подчеркивания */
+    transform: scaleX(0); /* Начальное состояние подчеркивания */
+    transition: transform 0.3s; /* Плавный переход для подчеркивания */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Полное подчеркивание при наведении */
+}
+.video-player {
+            width: 100%; /* Устанавливает ширину элемента равной 100% ширины родительского элемента */
+            max-width: 800px; /* Устанавливает максимальную ширину элемента в 800 пикселей.  Это означает, что элемент не будет шире 800 пикселей, даже если родительский элемент шире. */
+            margin: 20px auto;
+/* Устанавливает поля вокруг элемента:
+20px - верхний и нижний отступы.
+auto -  левый и правый отступы устанавливаются автоматически, чтобы элемент был выровнен по центру. */
+            background-color: rgba(0, 0, 0, 0.6); /* Черный полупрозрачный фон */
+            padding: 10px; /* Устанавливает внутренний отступ padding элемента в 10 пикселей */
+            border-radius: 10px; /* Cкругляет углы элемента с радиусом 10 пикселей. */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+/* Добавляет тень к элементу.
+Параметры тени:
+0 - горизонтальное смещение тени.
+4px - вертикальное смещение тени.
+8px -  размытие тени.
+rgba(0, 0, 0, 0.5 -  цвет тени. Полупрозрачный черный = 0.5 */
+        }
+        video {
+            width: 100%; /* Устанавливает ширину видео равной 100% ширины родительского элемента */
+        }
+.styled-list {
+	text-align: center; /* Центрирует текст по горизонтали */
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 20px auto; /* Отступы сверху и снизу */
+    max-width: 600px; /* Ширина списка */
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Округлые углы */
+}
+
+.styled-list li {
+    margin: 15px 0; /* Отступ между элементами списка */
+}
+
+.styled-list a {
+    color: #fff; /* Цвет текста */
+	font-family: 'RDRGothica-Regular', sans-serif;
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 18px; /* Размер шрифта */
+    transition: color 0.3s ease, transform 0.3s ease; /* Плавная анимация изменения цвета и эффекта при наведении */
+}
+
+.styled-list a:hover {
+    color: #ff4500; /* Цвет при наведении */
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.styled-list li:hover {
+    transform: scale(1.05); /* Небольшое поднятие элемента списка при наведении */
+}
+
+.styled-list b {
+    font-weight: bold; /* Жирное начертание */
+}
+figcaption {
+    font-size: 16px;                  /* Размер шрифта */
+    color: #ffffff;                   /* Цвет текста */
+	font-family: 'RDRGothica-Regular', sans-serif;
+	padding: 10px; /* Внутренние отступы для текста */
+	background-color: rgba(0, 0, 0, 0.6); /* Черный полупрозрачный фон */
+	margin: 20px auto; /* Отступы сверху и снизу, центрирование по горизонтали */
+    max-width: 400px; /* Ограничение по ширине блока текста */
+	border-radius: 10px;
+    text-align: center;               /* Выравнивание текста */
+    margin-top: 10px;                 /* Отступ сверху */
+}
+
+img {
+	border-radius: 15px;
+}
+hr {
+    background: linear-gradient(to right, #c94f2b, #7b2a1a);
+    border-radius: 5px;
+	border: none;
+	width: 600px; /* Ширина линии, например, 80% от родительского элемента */
+    height: 10px; /* Высота линии */
+	margin: 20px auto; /* Центрирование линии с отступами сверху и снизу */
+}
